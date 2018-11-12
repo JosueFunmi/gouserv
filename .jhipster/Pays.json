@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "dougbeService",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180928173353",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "pays",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no",
+    "microserviceName": "dougbeService"
+}

@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "fredy.josue.dougbeservice",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "microservice",
+    "baseName": "dougbeService",
+    "packageName": "fredy.josue.dougbeservice",
+    "packageFolder": "fredy/josue/dougbeservice",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YzczNDgxODJhNWYyMmM4ZTI5NmEwMzg3NzgxN2YyMDhlMDcxNmJiZmQ1MzA1OWZlMGUxMjg0NmI4NzMxNDY2MDNkZDFkY2FjZGMyYmJiZjU1ZmNlZWI5OGFkOTMxNjk4MjFiMzE4NTY0MmQyNzFmYjdmMTIzMzIwYTJmZGNjYjM=",
+    "enableTranslation": true,
+    "languages": [
+      "fr"
+    ],
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "clientPackageManager": "npm",
+    "nativeLanguage": "fr",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
