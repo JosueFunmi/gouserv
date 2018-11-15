@@ -27,7 +27,7 @@ public class CostumUserDTO implements Serializable {
     
     private Ville ville;
     
-    private Long profesionId;
+    private Long professionId;
     
     private Profession profession;
 
@@ -88,12 +88,12 @@ public class CostumUserDTO implements Serializable {
 		this.ville = ville;
 	}
 
-	public Long getProfesionId() {
-		return profesionId;
+	public Long getProfessionId() {
+		return professionId;
 	}
 
-	public void setProfesionId(Long profesionId) {
-		this.profesionId = profesionId;
+	public void setProfessionId(Long profesionId) {
+		this.professionId = profesionId;
 	}
 
 	public Profession getProfession() {

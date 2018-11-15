@@ -120,40 +120,6 @@ public class CostumUserCriteria implements Serializable {
 
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        final CostumUserCriteria that = (CostumUserCriteria) o;
-        return
-            Objects.equals(id, that.id) &&
-            Objects.equals(teint, that.teint) &&
-            Objects.equals(taille, that.taille) &&
-            Objects.equals(dateNais, that.dateNais) &&
-            Objects.equals(sexe, that.sexe) &&
-            Objects.equals(publicationId, that.publicationId) &&
-            Objects.equals(villeId, that.villeId) &&
-            Objects.equals(professionId, that.professionId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(
-        id,
-        teint,
-        taille,
-        dateNais,
-        sexe,
-        publicationId,
-        villeId,
-        professionId
-        );
-    }
-
-    @Override
     public String toString() {
         return "CostumUserCriteria{" +
                 (id != null ? "id=" + id + ", " : "") +

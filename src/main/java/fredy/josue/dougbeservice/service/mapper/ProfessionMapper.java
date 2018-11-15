@@ -15,7 +15,8 @@ public interface ProfessionMapper extends EntityMapper<ProfessionDTO, Profession
     //ProfessionDTO toDto(Profession profession);
 
     //@Mapping(source = "costumUserId", target = "costumUser")
-    //Profession toEntity(ProfessionDTO professionDTO);
+	@Mapping(target = "costumUsers", ignore = true)
+    Profession toEntity(ProfessionDTO professionDTO);
 
     default Profession fromId(Long id) {
         if (id == null) {

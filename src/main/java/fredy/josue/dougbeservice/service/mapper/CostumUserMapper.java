@@ -12,7 +12,7 @@ import org.mapstruct.*;
 public interface CostumUserMapper extends EntityMapper<CostumUserDTO, CostumUser> {
 
     @Mapping(source = "ville.id", target = "villeId")
-    @Mapping(source = "profesion.id", target = "professionId")
+    @Mapping(source= "profession.id", target = "professionId")
     CostumUserDTO toDto(CostumUser costumUser);
 
     @Mapping(target = "publications", ignore = true)

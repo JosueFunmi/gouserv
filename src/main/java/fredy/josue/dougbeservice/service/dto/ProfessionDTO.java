@@ -1,8 +1,13 @@
 package fredy.josue.dougbeservice.service.dto;
 
 import javax.validation.constraints.*;
+
+import fredy.josue.dougbeservice.domain.CostumUser;
+
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * A DTO for the Profession entity.
@@ -15,6 +20,8 @@ public class ProfessionDTO implements Serializable {
 
     @NotNull
     private String libelle;
+    
+    private Set<CostumUser> costumUsers = new HashSet<>();
 
     //private Long costumUserId;
 
@@ -43,7 +50,16 @@ public class ProfessionDTO implements Serializable {
     }
     
 
-    @Override
+    
+    public Set<CostumUser> getCostumUsers() {
+		return costumUsers;
+	}
+
+	public void setCostumUsers(Set<CostumUser> costumUsers) {
+		this.costumUsers = costumUsers;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
