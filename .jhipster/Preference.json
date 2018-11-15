@@ -1,0 +1,57 @@
+{
+    "name": "Preference",
+    "fields": [
+        {
+            "fieldName": "sexe",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "taille",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pays",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "teint",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "typeRencontre",
+            "fieldType": "TypeRencontre",
+            "fieldValues": "SERIEUX,LIBERTINE"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181114101814",
+    "entityTableName": "preference",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "dougbeService",
+    "applications": "*",
+    "microserviceName": "dougbeservice"
+}

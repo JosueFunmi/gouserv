@@ -1,0 +1,113 @@
+entity Pays{
+code String,
+libelle String required,
+indice Integer
+}
+
+entity Ville{
+code String,
+libelle String required,
+}
+
+entity CostumUser{
+teint Teint,
+taille Double,
+dateNais Instant,
+sexe Sexe
+}
+entity Profession{
+code String,
+libelle String required,
+}
+
+entity Publication{
+pub String,
+imageurl String,
+nbJaime Integer,
+nbJaimePas Integer
+quiVoit QuiVoit
+createdBy Long,
+createdDate Instant,
+lastModifiedBy Long,
+lastModifiedDate Instant,
+}
+entity Commentaire{
+comment String required,
+jaime Boolean,
+createdBy Long,
+createdDate Instant,
+lastModifiedBy Long,
+lastModifiedDate Instant,
+}
+
+entity Preference{
+sexe String,
+taille String,
+age String
+pays String
+teint String
+createdBy Long,
+createdDate Instant,
+lastModifiedBy Long,
+lastModifiedDate Instant,
+typeRencontre TypeRencontre
+}
+
+entity Ami{
+interested Long required,
+friend Long required,
+demande Boolean,
+dateAmis Instant,
+createdBy Long,
+createdDate Instant,
+lastModifiedBy Long,
+lastModifiedDate Instant,
+}
+
+enum Teint {
+    NOIR, BRONZE, BLANC
+}
+enum Sexe {
+    MASCULIN, FEMININ
+}
+enum TypeRencontre {
+    SERIEUX, LIBERTINE
+}
+enum QuiVoit {
+    PUBLIC, AMIS, MOI_UNIQUEMENT
+}
+
+//manyToOne
+relationship ManyToOne {
+	Profession to CostumUser
+}
+relationship ManyToOne {
+	Profession to CostumUser
+}
+
+
+//relation OneTomany
+relationship OneToMany {
+	Pays to Ville{Pays}
+}
+
+relationship OneToMany {
+	Ville to CostumUser{Ville}
+}
+
+relationship OneToMany {
+	CostumUser to Publication{CostumUser}
+}
+relationship OneToMany {
+	Publication to Commentaire{Publication}
+}
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+paginate * with pagination
+
+dto * with mapstruct
+service all with serviceImpl
+microservice * with dougbeservice
+filter *
+// Set an angular suffix
+//angularSuffix * with owo

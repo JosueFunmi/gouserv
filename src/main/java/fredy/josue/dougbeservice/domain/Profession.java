@@ -1,21 +1,21 @@
 package fredy.josue.dougbeservice.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
+import java.util.Set;
 
 /**
- * A Pays.
+ * A Profession.
  */
 @Entity
-@Table(name = "pays")
-public class Pays implements Serializable {
+@Table(name = "profession")
+public class Profession implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,11 +30,9 @@ public class Pays implements Serializable {
     @Column(name = "libelle", nullable = false)
     private String libelle;
 
-    @Column(name = "indice")
-    private Integer indice;
+    @OneToMany(mappedBy = "professions")
+    private Set<CostumUser> costumUsers = new HashSet<>();
 
-    @OneToMany(mappedBy = "pays")
-    private Set<Ville> villes = new HashSet<>();
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -48,7 +46,7 @@ public class Pays implements Serializable {
         return code;
     }
 
-    public Pays code(String code) {
+    public Profession code(String code) {
         this.code = code;
         return this;
     }
@@ -61,7 +59,7 @@ public class Pays implements Serializable {
         return libelle;
     }
 
-    public Pays libelle(String libelle) {
+    public Profession libelle(String libelle) {
         this.libelle = libelle;
         return this;
     }
@@ -70,46 +68,18 @@ public class Pays implements Serializable {
         this.libelle = libelle;
     }
 
-    public Integer getIndice() {
-        return indice;
-    }
-
-    public Pays indice(Integer indice) {
-        this.indice = indice;
-        return this;
-    }
-
-    public void setIndice(Integer indice) {
-        this.indice = indice;
-    }
-
-    public Set<Ville> getVilles() {
-        return villes;
-    }
-
-    public Pays villes(Set<Ville> villes) {
-        this.villes = villes;
-        return this;
-    }
-
-    public Pays addVille(Ville ville) {
-        this.villes.add(ville);
-        ville.setPays(this);
-        return this;
-    }
-
-    public Pays removeVille(Ville ville) {
-        this.villes.remove(ville);
-        ville.setPays(null);
-        return this;
-    }
-
-    public void setVilles(Set<Ville> villes) {
-        this.villes = villes;
-    }
+   
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
-    @Override
+    public Set<CostumUser> getCostumUsers() {
+		return costumUsers;
+	}
+
+	public void setCostumUsers(Set<CostumUser> costumUsers) {
+		this.costumUsers = costumUsers;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -117,11 +87,11 @@ public class Pays implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Pays pays = (Pays) o;
-        if (pays.getId() == null || getId() == null) {
+        Profession profession = (Profession) o;
+        if (profession.getId() == null || getId() == null) {
             return false;
         }
-        return Objects.equals(getId(), pays.getId());
+        return Objects.equals(getId(), profession.getId());
     }
 
     @Override
@@ -131,11 +101,10 @@ public class Pays implements Serializable {
 
     @Override
     public String toString() {
-        return "Pays{" +
+        return "Profession{" +
             "id=" + getId() +
             ", code='" + getCode() + "'" +
             ", libelle='" + getLibelle() + "'" +
-            ", indice=" + getIndice() +
             "}";
     }
 }

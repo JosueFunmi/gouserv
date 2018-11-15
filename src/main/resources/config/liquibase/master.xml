@@ -6,6 +6,18 @@
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180928173353_added_entity_Pays.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101809_added_entity_Ville.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101810_added_entity_CostumUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101811_added_entity_Profession.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101812_added_entity_Publication.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101813_added_entity_Commentaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101814_added_entity_Preference.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101815_added_entity_Ami.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20181114101809_added_entity_constraints_Ville.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101810_added_entity_constraints_CostumUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101811_added_entity_constraints_Profession.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101812_added_entity_constraints_Publication.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181114101813_added_entity_constraints_Commentaire.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

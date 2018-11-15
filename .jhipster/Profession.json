@@ -1,5 +1,5 @@
 {
-    "name": "Pays",
+    "name": "Profession",
     "fields": [
         {
             "fieldName": "code",
@@ -11,22 +11,18 @@
             "fieldValidateRules": [
                 "required"
             ]
-        },
-        {
-            "fieldName": "indice",
-            "fieldType": "Integer"
         }
     ],
     "relationships": [
         {
-            "relationshipType": "one-to-many",
-            "relationshipName": "ville",
-            "otherEntityName": "ville",
-            "otherEntityRelationshipName": "pays"
+            "relationshipType": "many-to-one",
+            "relationshipName": "costumUser",
+            "otherEntityName": "costumUser",
+            "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20180928173353",
-    "entityTableName": "pays",
+    "changelogDate": "20181114101811",
+    "entityTableName": "profession",
     "dto": "mapstruct",
     "pagination": "pagination",
     "service": "serviceImpl",

@@ -1,5 +1,5 @@
 {
-    "name": "Pays",
+    "name": "Ville",
     "fields": [
         {
             "fieldName": "code",
@@ -11,22 +11,24 @@
             "fieldValidateRules": [
                 "required"
             ]
-        },
-        {
-            "fieldName": "indice",
-            "fieldType": "Integer"
         }
     ],
     "relationships": [
         {
             "relationshipType": "one-to-many",
-            "relationshipName": "ville",
-            "otherEntityName": "ville",
-            "otherEntityRelationshipName": "pays"
+            "relationshipName": "costumUser",
+            "otherEntityName": "costumUser",
+            "otherEntityRelationshipName": "ville"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pays",
+            "otherEntityName": "pays",
+            "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20180928173353",
-    "entityTableName": "pays",
+    "changelogDate": "20181114101809",
+    "entityTableName": "ville",
     "dto": "mapstruct",
     "pagination": "pagination",
     "service": "serviceImpl",

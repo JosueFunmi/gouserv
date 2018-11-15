@@ -1,0 +1,53 @@
+{
+    "name": "CostumUser",
+    "fields": [
+        {
+            "fieldName": "teint",
+            "fieldType": "Teint",
+            "fieldValues": "NOIR,BRONZE,BLANC"
+        },
+        {
+            "fieldName": "taille",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "dateNais",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "sexe",
+            "fieldType": "Sexe",
+            "fieldValues": "MASCULIN,FEMININ"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "publication",
+            "otherEntityName": "publication",
+            "otherEntityRelationshipName": "costumUser"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "ville",
+            "otherEntityName": "ville",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "profession",
+            "otherEntityName": "profession",
+            "otherEntityRelationshipName": "costumUser"
+        }
+    ],
+    "changelogDate": "20181114101810",
+    "entityTableName": "costum_user",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "dougbeService",
+    "applications": "*",
+    "microserviceName": "dougbeservice"
+}

@@ -1,0 +1,66 @@
+{
+    "name": "Publication",
+    "fields": [
+        {
+            "fieldName": "pub",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "imageurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nbJaime",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nbJaimePas",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "quiVoit",
+            "fieldType": "QuiVoit",
+            "fieldValues": "PUBLIC,AMIS,MOI_UNIQUEMENT"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "commentaire",
+            "otherEntityName": "commentaire",
+            "otherEntityRelationshipName": "publication"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "costumUser",
+            "otherEntityName": "costumUser",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181114101812",
+    "entityTableName": "publication",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "dougbeService",
+    "applications": "*",
+    "microserviceName": "dougbeservice"
+}
